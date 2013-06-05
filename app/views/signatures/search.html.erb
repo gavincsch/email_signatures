@@ -1,0 +1,39 @@
+<h1>Search for an existing signature.
+</h1>
+<%=render 'searchform' %>
+<script type="text/javascript">
+
+ $(document).ready(function() {
+
+	// Clear text field on click
+	$('#search').focus(function(){
+		$(this).val('');
+	});
+
+	$('#search').blur(function(){
+		if($(this).val() == ''){
+			$(this).val('Search for your email signature');
+		}
+	});
+ });
+</script>
+
+<ul> 
+  <% if !@signature.empty? %>
+    
+  <% @signature.each do |signature| %>
+ 
+  <li class="entry"><%= link_to signature.name, :action => 'show', :id => signature.id %></li>
+     
+<% end %>
+<% else %>
+<div class="error_explanation">
+<h2>No Signatures Found.</h2>
+</div>
+
+<%end%>
+</ul>
+
+ <div><hr style="margin-top:25px; margin-bottom:25px; width:101.4%;"></div>
+
+<%= link_to 'New Signature', new_signature_path, :class => 'new' %>

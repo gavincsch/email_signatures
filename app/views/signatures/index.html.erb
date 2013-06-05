@@ -1,0 +1,35 @@
+
+  <div><h1>Create a new signature
+</h1>
+<%= link_to 'New Signature', new_signature_path, :class => 'new' %></div>
+  <div><hr style="margin-top:25px; width:101.4%;"></div>
+
+<h1>OR 
+  </br>
+  </br>
+  Search for an existing one!
+</h1>
+<div><hr style="margin-top:25px;margin-bottom:25px; width:101.4%;"></div>
+<%=render 'searchform' %>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+  // Clear text field on click
+  $('#search').focus(function(){
+    $(this).val('');
+  });
+
+  $('#search').blur(function(){
+    if($(this).val() == ''){
+      $(this).val('Search for your email signature');
+    }
+  });
+});
+
+</script>
+
+
+
+

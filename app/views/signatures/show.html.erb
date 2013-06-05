@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+<div id="wrapper-sig" style="margin-bottom:10px;">
+
+<table>
+	
+ <tr>
+  <td ><img  src="http://192.168.9.32/apps.zando.co.za/current/stationary/email/cat_profile.jpg" width="85" height="85"/>  </td>
+  <td >
+   <span id="name"><%=@signature.name%></span><span style="font-size:16px;"> /</span> <span id="position"><%=@signature.position%></span>
+  
+</br>
+
+
+   <span class="phone">phone </span><span class="contact"><%=@signature.contact%></span>
+   <span style="font-size:13px;"> /</span>
+   <span class="phone">skype </span><span class="contact"><%=@signature.skype%></span>
+
+</br>
+
+
+   <span id="address"><%=@signature.address%></span>
+ 
+</br>
+
+ 
+	<a href="http://www.zando.co.za" target="_blank" title="Zando">
+		<img src="http://apps.zando.co.za/stationary/email/logo-actual-size.png" width="147" height="43" alt="Zando" title="Zando"></a>
+ 
+</br>
+
+ <tr>
+  <td></td>
+ <td >
+	<a href= '<%= @signature.link %>' ><%=@signature.link%></a>
+</br>
+	                               	<%=@signature.message%>
+ </td>
+</tr>
+</tr>
+
+ </table>
+   
+</div>
+
+ <%= link_to 'Edit', edit_signature_path(@signature) %>
+   <%= link_to 'Destroy', @signature, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+

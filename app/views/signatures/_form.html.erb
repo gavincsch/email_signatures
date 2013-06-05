@@ -1,0 +1,44 @@
+<%= form_for (@signature) do |f| %>
+  
+  <% if @signature.errors.any? %>
+    <div class="error_explanation">
+      <h2><%= pluralize(@signature.errors.count, "error") %> prohibited this signature from being saved:</h2>
+
+      <ul>
+      <% @signature.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div id="form">
+  <div  >
+    <%= f.text_field :name, :placeholder=> 'Name', :class => 'text_field1' %>
+    </div>
+
+    <div >
+    <%= f.text_field :position,:placeholder=> 'Position', :class => 'text_field1' %>
+    </div>
+    <div >
+    <%= f.text_field :contact, :value=> '+27', :placeholder=> '0721234567', :class => 'text_field1' %>
+        </div>
+
+    <div >
+    <%= f.text_field :skype, :placeholder=> 'Skype Name' , :class => 'text_field1'%>
+    </div>
+    <div style="width:101.4%;" >
+      <% addresses = {'Warehouse' => '2 Oude Molen Road, Cape Town, Western Cape, South Africa', 'Salt River' => '1st Floor,97 Durham Avenue, Salt River, 7925, Cape Town, Western Cape, South Africa' } %>
+      <% list = addresses.sort%>
+      <%= f.select :address, list , {},{:class => 'text_field1'}%>
+    </div>
+
+  <div >
+    <%= f.text_field :link, :placeholder=> 'Marketing Link: eg http://www.zando.co.za/marketing-campaign' , :class => 'text_field1'%>
+    <%= f.text_field :message, :placeholder=> 'Marketing Message: eg This is a marketing campaign!' , :class => 'text_field1'%>
+    </div>
+
+  <div class="actions">
+    <%= f.submit 'GO', :class => 'subbtn' %>
+  </div>
+</div>
+<% end %>

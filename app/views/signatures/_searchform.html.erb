@@ -1,0 +1,6 @@
+<%= form_tag :controller => 'signatures', :action => 'search', :method => 'get' do %>
+      <%= text_field_tag :search, params[:search], :value => 'Search for your email signature' , :id => 'search',:class => 'text_field1' %>
+      <%= submit_tag "Search", :name => nil , :class => 'subbtn' %> 
+      
+  <% end %> 
+
