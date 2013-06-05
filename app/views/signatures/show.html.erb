@@ -5,7 +5,7 @@
 <table>
 	
  <tr>
-  <td ><!--<img  src="http://192.168.9.32/apps.zando.co.za/current/stationary/email/cat_profile.jpg" width="85" height="85"/>-->  </td>
+  <!--<td ><img  src="http://192.168.9.32/apps.zando.co.za/current/stationary/email/cat_profile.jpg" width="85" height="85"/>  </td>-->
   <td >
    <span id="name"><%=@signature.name%></span><span style="font-size:16px;"> /</span> <span id="position"><%=@signature.position%></span>
   
@@ -30,11 +30,11 @@
 </br>
 
  <tr>
-  <td></td>
- <td >
-	<a href= '<%= @signature.link %>' ><%=@signature.link%></a>
-</br>
-	                               	<%=@signature.message%>
+   <td >
+	<%=@signature.message%>
+  </br>
+  <a href= '<%= @signature.link %>' style="font-size:13px;" ><%=@signature.link%></a>
+  	
  </td>
 </tr>
 </tr>

@@ -38,7 +38,7 @@ namespace :deploy do
 	task :setup_config  do
 		desc "Tasks for first setting up the app"
 		#cap doesnt do this, so lets tell it to do it
-    run "mkdir -p #{shared_path}/config"
+    run "#{try_sudo} mkdir -p #{shared_path}/config"
     #create the database.yml on the server
     run "#{try_sudo} touch #{shared_path}/config/database.yml "
     puts "Now edit the database config in #{shared_path}."
