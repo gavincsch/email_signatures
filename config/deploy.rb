@@ -22,7 +22,7 @@ set :ssh_options, { :forward_agent => true }
 
 # Source Code
 set :scm, :git
-set :repository, "git@github.com:zando-coza/email_signatures.git"
+set :repository, "git@github.com:GavinCS/email_signatures.git"
 set :branch, "master"
 
 namespace :deploy do
