@@ -50,7 +50,7 @@ namespace :deploy do
   before "deploy:update_code", "deploy:change_ownership"
 
   task :change_ownership, roles: :app do
-    run "#{try_sudo} chown -R #{user}:#{user} /var/www/signatures.zando.co.za/"
+    run "#{try_sudo} chown -R root:root /var/www/signatures.zando.co.za/"
   end
 
   task :symlink_config, roles: :app do
