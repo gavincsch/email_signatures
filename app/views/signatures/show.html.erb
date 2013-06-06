@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 <div id="wrapper-sig" style="margin-bottom:10px;">
 
-<table border="1">
+<table>
 	
  <tr>
   <td > <%= image_tag @signature.image_url.to_s %> </td>
@@ -44,7 +44,7 @@
    
 </div>
 <hr>
- <div style="margin:10px; margin-right:5px; float:left;"><%= link_to 'Edit', edit_signature_path(@signature) %><span style="font-size:20px; margin-left:5px;"> /</span></div>
+ <div style="margin:10px; margin-right:5px; float:left;"><%= link_to 'Edit', edit_signature_path(@signature) %><span style="font-size:20px; margin-left:5px;"> </div>
 
 <div style="margin:10px; margin-left:5px; float:left;">   <%= link_to 'Delete', @signature, method: :delete, data: { confirm: 'Are you sure?' } %></div>
 
