@@ -1,4 +1,4 @@
-<%= form_for (@signature) do |f| %>
+<%= form_for @signature, :html => {:multipart => true} do |f| %>
   
   <% if @signature.errors.any? %>
     <div class="error_explanation">
@@ -30,6 +30,9 @@
       <% addresses = {'Warehouse' => '2 Oude Molen Road, Cape Town, Western Cape, South Africa', 'Salt River' => '1st Floor,97 Durham Avenue, Salt River, 7925, Cape Town, Western Cape, South Africa' } %>
       <% list = addresses.sort%>
       <%= f.select :address, list , {},{:class => 'text_field1'}%>
+    </div>
+    <div>
+      <%= f.file_field  :image, :class => 'text_field1' %>
     </div>
 
   <div >

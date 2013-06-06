@@ -6,7 +6,10 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-
+gem "carrierwave"
+gem "rmagick"
+gem "paperclip"
+gem "nokogiri"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,6 +22,7 @@ group :assets do
   gem 'libv8'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-sass', '~> 2.0.4.0'
 end
 
 gem 'jquery-rails'

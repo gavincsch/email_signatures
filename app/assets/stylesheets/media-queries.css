@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Smartphones (portrait and landscape) ----------- */
+
+/* Minumum ----------- */
+@media only screen 
+and (min-width : 0px) {
+	
+
+	header{
+		height:50px;
+		background-size:100%;
+		
+	}
+	
+	footer{
+		height:0px;
+		background-size:100%;
+	}
+	#footertext{
+		font-size: 16px;
+	}
+	
+}
+
+/* Mobile Small ----------- 
+@media only screen 
+and (min-width : 320px) {
+	
+}*/
+
+/* iPhone Portrait ----------- */
+@media only screen 
+and (min-width : 380px) {
+/* Styles */
+
+
+	header{
+		height:50px;
+		background-size:100%;
+		
+	}
+	
+	footer{
+		height:0px;
+		background-size:100%;
+	
+	}
+	#footertext{
+		font-size: 16px;
+	}
+
+	
+
+}
+
+/* iPhone Landscape ----------- */
+@media only screen 
+and (min-width : 480px) {
+/* Styles */
+	
+
+	header{
+		height:50px;
+		background-size:70%;
+		}
+
+footer{
+		height:30px;
+		background-size:100%;
+	}
+	#footertext{
+		font-size: 20px;
+	}
+
+	
+	
+}
+
+/* iPad Portrait ----------- */
+@media only screen 
+and (min-width : 768px) {
+/* Styles */
+	
+
+	header{
+		height:50px;
+		background-size:60%;
+		}
+	
+	footer{
+		height:50px;
+		background-size:100%;
+	}
+	#footertext{
+		font-size: 20px;
+	}
+	
+}
+
+/* Desktops and laptops and iPad landscape ----------- */
+@media only screen 
+and (min-width : 1024px) {
+/* Styles */
+	header{
+		height:50px;
+		
+	}
+	footer{
+		height:50px;
+		background-size:100%;
+	}
+	#footertext{
+		font-size: 20px;
+	}
+}

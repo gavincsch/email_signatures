@@ -5,7 +5,7 @@
 <table>
 	
  <tr>
-  <!--<td ><img  src="http://192.168.9.32/apps.zando.co.za/current/stationary/email/cat_profile.jpg" width="85" height="85"/>  </td>-->
+  <td > <%= image_tag @signature.image_url.to_s %> </td>
   <td >
    <span id="name"><%=@signature.name%></span><span style="font-size:16px;"> /</span> <span id="position"><%=@signature.position%></span>
   
@@ -42,9 +42,10 @@
  </table>
    
 </div>
+<hr>
+ <div style="margin:10px; margin-right:5px; float:left;"><%= link_to 'Edit', edit_signature_path(@signature) %><span style="font-size:20px; margin-left:5px;"> /</span></div>
 
- <%= link_to 'Edit', edit_signature_path(@signature) %>
-   <%= link_to 'Destroy', @signature, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div style="margin:10px; margin-left:5px; float:left;">   <%= link_to 'Delete', @signature, method: :delete, data: { confirm: 'Are you sure?' } %></div>
 
 
 
