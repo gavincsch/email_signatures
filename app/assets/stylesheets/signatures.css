@@ -17,10 +17,7 @@ header{
 	background-image: -webkit-linear-gradient(top,#3c3c3c,#111)
 }
 footer{
-	position:fixed;
-	bottom: 0px;
-	right: 0px;
-	left: 0px;
+	margin-top: 25px;
 	background: #111;	
 	width: 100%;
 	display:block;
