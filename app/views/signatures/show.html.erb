@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 <div id="wrapper-sig" style="margin-bottom:10px;">
 
-<table>
+<table border="1">
 	
  <tr>
   <td > <%= image_tag @signature.image_url.to_s %> </td>
@@ -28,7 +28,10 @@
 		<img src="http://apps.zando.co.za/stationary/email/logo-actual-size.png" width="147" height="43" alt="Zando" title="Zando"></a>
  
 </br>
+</tr>
 
+ </table>
+ <table>
  <tr>
    <td >
 	<%=@signature.message%>
@@ -37,9 +40,7 @@
   	
  </td>
 </tr>
-</tr>
-
- </table>
+</table>
    
 </div>
 <hr>
