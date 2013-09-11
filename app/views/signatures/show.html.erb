@@ -4,8 +4,11 @@
 
 <table>
 	
- <tr>
+ <tr><% if @signature.image_url.present? %> 
   <td > <%=image_tag @signature.image_url  %> </td>
+  <%else%>
+  <td></td>
+  <%end%>
   <td >
    <span id="name"><%=@signature.name%></span><span style="font-size:16px;"> /</span> <span id="position"><%=@signature.position%></span>
   
