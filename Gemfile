@@ -7,7 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 gem "carrierwave"
-gem "rmagick"
+gem 'mini_magick'
 gem "paperclip"
 gem "nokogiri"
 

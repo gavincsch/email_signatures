@@ -11,7 +11,7 @@ set :application, "email_signature"
 
 
 # Settings
-set :deploy_to, "/var/www/signatures.zando.co.za/"
+set :deploy_to, "/var/www/example.com/"
 set :deploy_via, :remote_cache
 # set :use_sudo, true
 default_run_options[:pty] = true
@@ -22,7 +22,7 @@ set :ssh_options, { :forward_agent => true }
 
 # Source Code
 set :scm, :git
-set :repository, "git@github.com:GavinCS/email_signatures.git"
+set :repository, "git@github.com:gavinsch//email_signatures.git"
 set :branch, "master"
 
 namespace :deploy do
@@ -50,7 +50,7 @@ namespace :deploy do
   before "deploy:update_code", "deploy:change_ownership"
 
   task :change_ownership, roles: :app do
-    run "#{try_sudo} chown -R #{user}:#{user} /var/www/signatures.zando.co.za/"
+    run "#{try_sudo} chown -R #{user}:#{user} /var/www/example.com/"
   end
 
   task :symlink_config, roles: :app do
@@ -62,7 +62,7 @@ namespace :deploy do
 
   task :reset_ownership, roles: :app do 
     desc "Change ownership from deployer to www-data"
-    run "#{try_sudo} chown -R www-data:www-data /var/www/signatures.zando.co.za/"
+    run "#{try_sudo} chown -R www-data:www-data /var/www/example.com/"
     run "#{try_sudo} chmod -R 777 #{release_path}/log"
   end
 

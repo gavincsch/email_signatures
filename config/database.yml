@@ -5,6 +5,6 @@ development:
   database: email_signature_development
   pool: 5
   username: root
-  password: admin
-  socket: /var/run/mysqld/mysqld.sock
+  password:
+  socket: /tmp/mysql.sock
 
