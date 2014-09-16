@@ -27,7 +27,7 @@
     <%= f.text_field :skype, :placeholder=> 'Skype Name' , :class => 'text_field1'%>
     </div>
     <div style="width:101.4%;" >
-      <% addresses = {'Warehouse' => '2 Oude Molen Road, Cape Town, Western Cape, South Africa', 'Salt River' => '1st Floor,97 Durham Avenue, Salt River, 7925, Cape Town, Western Cape, South Africa' } %>
+      <% addresses = {'HQ' => '1 Main Road, Cape Town, Western Cape, South Africa', 'Johannesburg' => '1 Main road, centurion, Gauteng, South Africa' } %>
       <% list = addresses.sort%>
       <%= f.select :address, list , {},{:class => 'text_field1'}%>
     </div>
